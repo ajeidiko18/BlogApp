@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.aj.blogapp.users.UserRepositoryTests" tests="2" skipped="0" failures="1" errors="0" timestamp="2024-06-10T12:47:40" hostname="bandaru-ideacentre-300S-11ISH" time="0.705">
+  <properties/>
+  <testcase name="can_create_users()" classname="com.aj.blogapp.users.UserRepositoryTests" time="0.568"/>
+  <testcase name="can_find_users()" classname="com.aj.blogapp.users.UserRepositoryTests" time="0.134">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;2&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;2&gt;
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at app//com.aj.blogapp.users.UserRepositoryTests.can_find_users(UserRepositoryTests.java:40)
+	at java.base@17.0.10/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[18:17:36.261 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.aj.blogapp.users.UserRepositoryTests]: UserRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:17:36.384 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.aj.blogapp.BlogAppApplication for test class com.aj.blogapp.users.UserRepositoryTests
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2024-06-10T18:17:36.792+05:30  INFO 87666 --- [    Test worker] c.aj.blogapp.users.UserRepositoryTests   : Starting UserRepositoryTests using Java 17.0.10 with PID 87666 (started by bandaru in /home/bandaru/Documents/AJ/Java/Projects/BlogApp)
+2024-06-10T18:17:36.793+05:30  INFO 87666 --- [    Test worker] c.aj.blogapp.users.UserRepositoryTests   : The following 1 profile is active: "test"
+2024-06-10T18:17:37.696+05:30  INFO 87666 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-10T18:17:37.754+05:30  INFO 87666 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2024-06-10T18:17:38.161+05:30  INFO 87666 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-10T18:17:38.208+05:30  INFO 87666 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-10T18:17:38.241+05:30  INFO 87666 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-10T18:17:38.528+05:30  INFO 87666 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-10T18:17:38.552+05:30  INFO 87666 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-10T18:17:38.758+05:30  INFO 87666 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./blog_app user=
+2024-06-10T18:17:38.760+05:30  INFO 87666 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-10T18:17:39.648+05:30  INFO 87666 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-10T18:17:39.699+05:30  INFO 87666 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-10T18:17:40.237+05:30  WARN 87666 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-10T18:17:40.688+05:30  INFO 87666 --- [    Test worker] c.aj.blogapp.users.UserRepositoryTests   : Started UserRepositoryTests in 4.158 seconds (process running for 5.263)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
