@@ -1,25 +1,23 @@
 package com.aj.blogapp.users;
 
-import com.aj.blogapp.users.dtos.CreateUserRequest;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.aj.blogapp.users.dtos.UserRequest;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UsersService {
 
     private final UsersRepository usersRepository;
+    private final ModelMapper modelMapper;
 
-    public UsersService(UsersRepository usersRepository) {
+    public UsersService(UsersRepository usersRepository, ModelMapper modelMapper) {
         this.usersRepository = usersRepository;
-
-
+        this.modelMapper = modelMapper;
     }
 
-    public UserEntity createUser(CreateUserRequest req) {
-
-        var newUser= UserEntity.builder().username(req.getUsername())
-//                .password(req.getPassword()) // TODO encrypt the password
-                .email(req.getEmail()).build();
+    public UserEntity createUser(UserRequest u) {
+        UserEntity newUser = modelMapper.map(u, UserEntity.class);
+        // TODO encrypt the password
         return usersRepository.save(newUser);
     }
 
@@ -43,11 +41,11 @@ public class UsersService {
 
         public UserNotFoundException(String username){
 
-            super("User with username:" + username + "not found");
+            super("User with username: " + username + " not found");
         }
         public UserNotFoundException(Long userId){
 
-            super("User with user Id" + userId + "not found");
+            super("User with user Id: " + userId + " not found");
         }
     }
     
