@@ -3,6 +3,7 @@ package com.aj.blogapp.users;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,8 @@ public class UserRepositoryTests {
 
     @Autowired
     public UsersRepository usersRepository;
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Test
     @Order(1)
